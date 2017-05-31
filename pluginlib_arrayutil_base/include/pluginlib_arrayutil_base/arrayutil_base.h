@@ -1,6 +1,6 @@
 namespace array_util_base 
 {
-  class array_util
+  class ArrayUtil
   {
     public:
       void load_array()
@@ -9,10 +9,10 @@ namespace array_util_base
           array.clear();
       }
       virtual double operate() = 0;
-      virtual ~array_util(){}
+      virtual ~ArrayUtil(){}
 
     protected:
-      array_util(){}
+      ArrayUtil(){}
 
     private:
       std::vector<double> array;
