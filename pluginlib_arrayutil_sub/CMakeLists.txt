@@ -112,10 +112,10 @@ include_directories(
 )
 
 # Declare a C++ library
- add_library(sum
+ add_library(${PROJECT_NAME}
    src/sum.cpp
  )
-target_link_libraries(sum
+target_link_libraries(${PROJECT_NAME}
   ${catkin_LIBRARIES}
 )
 
@@ -142,6 +142,21 @@ target_link_libraries(pluginlib_client
 
 # all install targets should use catkin DESTINATION variables
 # See http://ros.org/doc/api/catkin/html/adv_user_guide/variables.html
+
+install(TARGETS ${PROJECT_NAME} pluginlib_client
+  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+
+## Mark cpp header files for installation
+install(DIRECTORY include/${PROJECT_NAME}/
+  DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+  FILES_MATCHING PATTERN "*.h"
+  PATTERN ".svn" EXCLUDE)
+
+## Mark other files for installation (e.g. launch and bag files, etc.)
+install(FILES arrayutil_plugins.xml
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
 
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
@@ -170,6 +185,7 @@ target_link_libraries(pluginlib_client
 #   # myfile2
 #   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 # )
+
 
 #############
 ## Testing ##
