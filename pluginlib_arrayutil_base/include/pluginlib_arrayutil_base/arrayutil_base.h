@@ -1,20 +1,18 @@
-namespace array_util_base 
+#include <ros/ros.h>
+
+namespace arrayutil_base 
 {
   class ArrayUtil
   {
     public:
-      void load_array()
-      {
-        if (array.size() > 0)
-          array.clear();
-      }
+      void loadArray(ros::NodeHandle &nh);
       virtual double operate() = 0;
       virtual ~ArrayUtil(){}
 
     protected:
       ArrayUtil(){}
 
-    private:
-      std::vector<double> array;
+    //private:
+      std::vector<double> array_;
   };
 };
