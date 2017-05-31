@@ -103,11 +103,11 @@ catkin_package(
   INCLUDE_DIRS include
   LIBRARIES pluginlib_arrayutil_base
   CATKIN_DEPENDS pluginlib roscpp std_msgs
-  DEPENDS system_lib
+  DEPENDS Boost system_lib
 )
 
 include_directories(
-  include ${catkin_INCLUDE_DIRS}
+  include ${catkin_INCLUDE_DIRS} ${Boost_INCLUDE_DIRS}
 )
 
 # Declare a C++ library

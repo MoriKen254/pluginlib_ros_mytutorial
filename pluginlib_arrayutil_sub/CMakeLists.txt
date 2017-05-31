@@ -104,34 +104,37 @@ catkin_package(
   INCLUDE_DIRS include
   LIBRARIES pluginlib_arrayutil_sub
   CATKIN_DEPENDS pluginlib roscpp std_msgs
-  DEPENDS system_lib
+  DEPENDS Boost system_lib
 )
 
 include_directories(
-  include ${catkin_INCLUDE_DIRS}
+  include ${catkin_INCLUDE_DIRS} ${Boost_INCLUDE_DIRS}
 )
 
 # Declare a C++ library
  add_library(sum
    src/sum.cpp
  )
+target_link_libraries(sum
+  ${catkin_LIBRARIES}
+)
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generatjed before libraries
 ## either from message generation or dynamic reconfigure
 # add_dependencies(pluginlib_arrayutil_sub ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
-## Declare a C++ executable
-# add_executable(pluginlib_arrayutil_sub_node src/pluginlib_arrayutil_sub_node.cpp)
+# Declare a C++ executable
+add_executable(pluginlib_client src/plugin_client.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 # add_dependencies(pluginlib_arrayutil_sub_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(pluginlib_arrayutil_sub_node
-#   ${catkin_LIBRARIES}
-# )
+target_link_libraries(pluginlib_client
+  ${catkin_LIBRARIES}
+)
 
 #############
 ## Install ##
