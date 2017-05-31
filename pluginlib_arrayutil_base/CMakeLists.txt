@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(pluginlib_animal_base)
+project(pluginlib_arrayutil_base)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -101,7 +101,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES pluginlib_animal_base
+#  LIBRARIES pluginlib_arrayutil_base
 #  CATKIN_DEPENDS pluginlib roscpp std_msgs
 #  DEPENDS system_lib
 )
@@ -118,24 +118,24 @@ include_directories(
 )
 
 ## Declare a C++ library
-# add_library(pluginlib_animal_base
-#   src/${PROJECT_NAME}/pluginlib_animal_base.cpp
+# add_library(pluginlib_arrayutil_base
+#   src/${PROJECT_NAME}/pluginlib_arrayutil_base.cpp
 # )
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
 ## either from message generation or dynamic reconfigure
-# add_dependencies(pluginlib_animal_base ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+# add_dependencies(pluginlib_arrayutil_base ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Declare a C++ executable
-# add_executable(pluginlib_animal_base_node src/pluginlib_animal_base_node.cpp)
+# add_executable(pluginlib_arrayutil_base_node src/pluginlib_arrayutil_base_node.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-# add_dependencies(pluginlib_animal_base_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+# add_dependencies(pluginlib_arrayutil_base_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(pluginlib_animal_base_node
+# target_link_libraries(pluginlib_arrayutil_base_node
 #   ${catkin_LIBRARIES}
 # )
 
@@ -154,7 +154,7 @@ include_directories(
 # )
 
 ## Mark executables and/or libraries for installation
-# install(TARGETS pluginlib_animal_base pluginlib_animal_base_node
+# install(TARGETS pluginlib_arrayutil_base pluginlib_arrayutil_base_node
 #   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
@@ -179,7 +179,7 @@ include_directories(
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_pluginlib_animal_base.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_pluginlib_arrayutil_base.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
