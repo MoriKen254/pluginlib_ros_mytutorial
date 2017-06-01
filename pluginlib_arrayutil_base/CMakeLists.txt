@@ -22,7 +22,7 @@ include_directories(
 add_library(pluginlib_arrayutil_base src/arrayutil_base.cpp)
 target_link_libraries(pluginlib_arrayutil_base ${catkin_LIBRARIES})
 
-# Mark other files for installation (e.g. launch and bag files, etc.)
+## Mark other files for installation (e.g. launch and bag files, etc.)
 install(DIRECTORY include/${PROJECT_NAME}/
   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION})
 

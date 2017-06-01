@@ -14,12 +14,24 @@ int main()
     //add->get_numbers(10.0,10.0);
     double result = sum->operate();
 
-    ROS_INFO("Triangle area: %.2f", result);
+    ROS_INFO("Sum: %.2f", result);
   }
   catch(pluginlib::PluginlibException& ex)
   {
     ROS_ERROR("The plugin failed to load for some reason. Error: %s", ex.what());
   }
 
+  try
+  {
+    boost::shared_ptr<arrayutil_base::ArrayUtil> ave = arrayutil_loader.createInstance("pluginlib_arrayutil_sub/Ave");
+    //add->get_numbers(10.0,10.0);
+    double result = ave->operate();
+
+    ROS_INFO("Ave: %.2f", result);
+  }
+  catch(pluginlib::PluginlibException& ex)
+  {
+    ROS_ERROR("The plugin failed to load for some reason. Error: %s", ex.what());
+  }
   return 0;
 }
