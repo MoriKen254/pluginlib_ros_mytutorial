@@ -6,7 +6,6 @@ namespace arrayutil_plugins
   {
     public:
       Sum();
-      void loadArray();
       double operate();
   };
 }

@@ -5,7 +5,8 @@ namespace arrayutil_base
   class ArrayUtil
   {
     public:
-      void setArray(std::vector<int> array);
+      void setArray(const std::vector<double> array);
+      void setArray(const double *array, const int size);
       virtual double operate() = 0;
       virtual ~ArrayUtil(){}
 
@@ -13,6 +14,6 @@ namespace arrayutil_base
       ArrayUtil(){}
 
     //private:
-      std::vector<double> array_;
+      std::vector<double> vec_;
   };
 };

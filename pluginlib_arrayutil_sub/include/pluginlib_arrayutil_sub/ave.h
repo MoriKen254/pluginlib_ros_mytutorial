@@ -6,7 +6,6 @@ namespace arrayutil_plugins
   {
     public:
       Ave();
-      void loadArray();
       double operate();
   };
 }
