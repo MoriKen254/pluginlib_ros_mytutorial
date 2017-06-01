@@ -9,7 +9,7 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 catkin_package(
-  INCLUDE_DIRS include
+  #INCLUDE_DIRS include
   LIBRARIES pluginlib_arrayutil_client
   CATKIN_DEPENDS pluginlib roscpp std_msgs
 )
