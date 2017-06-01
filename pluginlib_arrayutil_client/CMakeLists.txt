@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(pluginlib_arrayutil_client)
 
-find_package(catkin REQUIRED COMPONENTS
+find_package(catkin COMPONENTS#REQUIRED COMPONENTS
   pluginlib
   roscpp
   std_msgs
