@@ -73,6 +73,7 @@ before_script:
 script:
   # for ROS
   - cd ~/catkin_ws
+  - catkin_make pluginlib_arrayutil_base
   - catkin_make $( [ -f $CATKIN_OPTIONS ] && cat $CATKIN_OPTIONS )
   - source devel/setup.bash
   # Testing: Use both run_tests (to see the output) and test (to error out).
