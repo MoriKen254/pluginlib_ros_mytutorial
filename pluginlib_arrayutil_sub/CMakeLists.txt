@@ -23,10 +23,6 @@ include_directories(
 add_library(${PROJECT_NAME} src/sum.cpp src/ave.cpp src/min.cpp src/max.cpp)
 target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES})
 
-# Declare a C++ executable
-#add_executable(pluginlib_client src/plugin_client.cpp)
-#target_link_libraries(pluginlib_client ${catkin_LIBRARIES})
-
 install(TARGETS ${PROJECT_NAME} #pluginlib_client
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
