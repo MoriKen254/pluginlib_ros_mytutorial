@@ -1,5 +1,5 @@
 # Use ubuntu trusty (14.04) with sudo privileges.
-dist: trusty
+dist: xenial #trusty
 sudo: required
 language:
   - generic
