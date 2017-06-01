@@ -3,6 +3,7 @@
 #include <pluginlib/class_loader.h>
 #include "pluginlib_arrayutil_base/arrayutil_base.h"
 
+#include <ros/ros.h>
 #include <gtest/gtest.h>
 
 // TEST CASES

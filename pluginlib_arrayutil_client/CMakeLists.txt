@@ -4,14 +4,13 @@ project(pluginlib_arrayutil_client)
 find_package(catkin REQUIRED COMPONENTS
   pluginlib
   roscpp
-  std_msgs
   pluginlib_arrayutil_base
 )
 
 catkin_package(
   #INCLUDE_DIRS include
   LIBRARIES pluginlib_arrayutil_client
-  CATKIN_DEPENDS pluginlib roscpp std_msgs
+  CATKIN_DEPENDS pluginlib roscpp
 )
 
 include_directories(
