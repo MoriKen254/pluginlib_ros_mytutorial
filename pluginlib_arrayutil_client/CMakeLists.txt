@@ -5,7 +5,7 @@ find_package(catkin REQUIRED COMPONENTS
   pluginlib
   roscpp
   std_msgs
-  # pluginlib_arrayutil_base
+  pluginlib_arrayutil_base
 )
 
 catkin_package(
