@@ -37,3 +37,6 @@ target_link_libraries(pluginlib_client ${catkin_LIBRARIES})
 #install(FILES arrayutil_plugins.xml
 #  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
 #
+install(FILES steer_drive_controller_plugins.xml
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+

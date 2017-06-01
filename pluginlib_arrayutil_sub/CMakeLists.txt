@@ -38,3 +38,17 @@ install(DIRECTORY include/${PROJECT_NAME}/
 install(FILES arrayutil_plugins.xml
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
 
+if (CATKIN_ENABLE_TESTING)
+  find_package(catkin REQUIRED COMPONENTS
+    rostest
+    pluginlib
+    roscpp
+    std_msgs
+    pluginlib_arrayutil_base
+  )
+
+  add_rostest_gtest(${PROJECT_NAME}_test
+    test/pluginlib_arrayutil_sub.test
+    test/pluginlib_arrayutil_sub_test.cpp)
+  target_link_libraries(${PROJECT_NAME}_test ${catkin_LIBRARIES})
+endif()
