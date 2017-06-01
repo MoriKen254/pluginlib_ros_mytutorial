@@ -47,6 +47,8 @@
   <run_depend>roscpp</run_depend>
   <run_depend>std_msgs</run_depend>
 
+  <test_depend>rostest</test_depend>
+
   <!-- The export tag contains other, unspecified, tags -->
   <export>
     <pluginlib_arrayutil_sub plugin="${prefix}/arrayutil_plugins.xml" />
