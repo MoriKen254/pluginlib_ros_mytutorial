@@ -20,7 +20,7 @@ include_directories(
 )
 
 # Declare a C++ library
-add_library(${PROJECT_NAME} src/sum.cpp src/ave.cpp)
+add_library(${PROJECT_NAME} src/sum.cpp src/ave.cpp src/min.cpp src/max.cpp)
 target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES})
 
 # Declare a C++ executable

@@ -33,5 +33,32 @@ int main()
   {
     ROS_ERROR("The plugin failed to load for some reason. Error: %s", ex.what());
   }
+
+  try
+  {
+    boost::shared_ptr<arrayutil_base::ArrayUtil> min = arrayutil_loader.createInstance("pluginlib_arrayutil_sub/Min");
+    //add->get_numbers(10.0,10.0);
+    double result = min->operate();
+
+    ROS_INFO("Min: %.2f", result);
+  }
+  catch(pluginlib::PluginlibException& ex)
+  {
+    ROS_ERROR("The plugin failed to load for some reason. Error: %s", ex.what());
+  }
+
+  try
+  {
+    boost::shared_ptr<arrayutil_base::ArrayUtil> max = arrayutil_loader.createInstance("pluginlib_arrayutil_sub/Max");
+    //add->get_numbers(10.0,10.0);
+    double result = max->operate();
+
+    ROS_INFO("Max: %.2f", result);
+  }
+  catch(pluginlib::PluginlibException& ex)
+  {
+    ROS_ERROR("The plugin failed to load for some reason. Error: %s", ex.what());
+  }
+
   return 0;
 }
